@@ -1,0 +1,15 @@
+H5FS is a mountable Linux virtual file system that allows user to read the
+content of HDF5 as if they were real files.
+
+In fact, HDF5 simplifies the file structure to include only two major types of
+object:
+
+* Datasets, which are multidimensional arrays of a homogenous type
+
+* Groups, which are container structures which can hold datasets and other
+  groups
+
+This results in a truly hierarchical, filesystem-like data format as resources
+in an HDF5 file are even accessed using the POSIX-like syntax
+/path/to/resource. By this way a virtual file system that exposes to the user
+the hierarchical data seems natural.
